@@ -47,10 +47,10 @@ const TwilioSMS = () => {
 
   const sendSMS = (phoneNumber, message) => {
     // Replace with your Twilio credentials and API endpoint
-    const accountSid = 'ACd0e23d6f1eb055f3827350bdf98e829a';
-    const authToken = '71b7fd6607d2b98469ae2120537432ee';
-    const twilioNumber = '+17122170845';
-    const apiUrl = `https://api.twilio.com/2010-04-01/Accounts/${accountSid}/Messages.json`;
+    const accountSid = process.env.ACCOUNT_SID;
+    const authToken = process.env.AUTH_TOKEN;
+    const twilioNumber = process.env.TWILIO_NUMBER;
+    const apiUrl = process.env.AUTH_TOKEN;
 
     axios.post(
       apiUrl,
